@@ -1,9 +1,11 @@
 # Tarea 12
 
-Realiza una instalación limpia de una base de datos y marca la opción de “Demo
+Realiza una instalación limpia de una base de datos y mar
+ca la opción de “Demo
 data”. Posteriormente instala las aplicaciones de facturación y contactos.
 
 ## Apartado 1
+
 Mediante la
 herramienta PgAdmin u otro método que estimes oportuno, elabora y ejecuta una
 sentencia que cree una tabla llamada “EmpresasFCT“con los siguientes campos:
@@ -40,3 +42,15 @@ VALUES
     ('Empresa5', TRUE, 7, '2025-01-20');
 ```
 ![Screenshot_20250225_133252.png](img/Screenshot_20250225_133252.png)
+
+## Apartado 3
+
+Realiza una consulta donde se muestren todos los datos de la tabla EmpresasFCT
+ordenados por fechaContacto, de modo que en la primera fila salga el que tenga la
+fecha más reciente.
+
+```sql
+SELECT * FROM EmpresasFCT ORDER BY fechaContacto DESC;
+```
+![Screenshot_20250225_133544.png](img/Screenshot_20250225_133544.png)
+
