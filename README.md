@@ -145,3 +145,23 @@ SET email = REPLACE(email, '@bilbao.example.com', '@bilbao.bizkaia.neus')
 WHERE email LIKE '%@bilbao.example.com';
 ```
 ![Screenshot_20250225_134257.png](img/Screenshot_20250225_134257.png)
+
+## Apartado 8
+
+La empresa Ready Mat ha hecho un ERE y ha despedido a todos los empleados
+que tenías como contacto. Crea una sentencia que elimine todos los contactos
+pertenecientes a la empresa “Ready Mat”, pero mantén la empresa. Añade una
+captura de pantalla de la sección de contactos de odoo con Ready Mat antes y
+después.
+
+### Antes
+![Screenshot_20250225_134514.png](img/Screenshot_20250225_134514.png)
+
+```sql
+DELETE FROM res_partner 
+WHERE parent_id = (SELECT id FROM res_partner WHERE name = 'Ready Mat');
+```
+![Screenshot_20250225_134627.png](img/Screenshot_20250225_134627.png)ç
+
+### Después
+![Screenshot_20250225_134758.png](img/Screenshot_20250225_134758.png)
