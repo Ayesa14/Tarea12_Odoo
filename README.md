@@ -26,4 +26,17 @@ CREATE TABLE EmpresasFCT (
 ```
 ![Screenshot_20250225_132854.png](img/Screenshot_20250225_132854.png)
 
+## Apartado 2
 
+Inserta 5 registros inventados en la tabla a través de una sentencia SQL.
+
+```sql
+INSERT INTO EmpresasFCT (nombre, quiereAlumnos, numAlumnos, fechaContacto)
+VALUES
+    ('Empresa1', TRUE, 5, '2025-01-25'),
+    ('Empresa2', FALSE, 0, '2025-01-12'),
+    ('Empresa3', TRUE, 3, '2025-01-01'),
+    ('Empresa4', TRUE, 10, '2025-01-14'),
+    ('Empresa5', TRUE, 7, '2025-01-20');
+```
+![Screenshot_20250225_133252.png](img/Screenshot_20250225_133252.png)
