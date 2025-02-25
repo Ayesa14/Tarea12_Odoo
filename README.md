@@ -54,3 +54,27 @@ SELECT * FROM EmpresasFCT ORDER BY fechaContacto DESC;
 ```
 ![Screenshot_20250225_133544.png](img/Screenshot_20250225_133544.png)
 
+## Apartado 4
+
+Realiza una consulta que permita obtener un listado de todos los contactos de
+Odoo (no empresas) con la siguiente información:
+- Nombre
+- Cuya ciudad sea Tracy, y código postal 95304
+- Nombre comercial de la empresa
+  ordenados alfabéticamente por el nombre comercial de la empresa
+
+```sql
+SELECT
+    contacto.name,
+    empresa.name
+FROM
+    res_partner contacto
+        LEFT JOIN
+    res_partner empresa ON contacto.parent_id = empresa.id
+WHERE
+    contacto.is_company = FALSE
+  AND contacto.city = 'Tracy'
+ORDER BY
+    empresa.name ASC;
+```
+![Screenshot_20250225_133904.png](img/Screenshot_20250225_133904.png)
