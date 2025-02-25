@@ -134,3 +134,14 @@ HAVING
 ```
 ![Screenshot_20250225_134153.png](img/Screenshot_20250225_134153.png)
 
+## Apartado 7
+
+Crea una sentencia que actualice el correo de los contactos cuyo dominio es
+@bilbao.example.com a @bilbao.bizkaia.neus
+
+```sql
+UPDATE res_partner
+SET email = REPLACE(email, '@bilbao.example.com', '@bilbao.bizkaia.neus')
+WHERE email LIKE '%@bilbao.example.com';
+```
+![Screenshot_20250225_134257.png](img/Screenshot_20250225_134257.png)
